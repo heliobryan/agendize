@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "911346663557",
+    "project_id": "agendize-b8ec3",
+    "storage_bucket": "agendize-b8ec3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911346663557:android:6fc90a1a48c5471b9da9ec",
+        "android_client_info": {
+          "package_name": "com.example.agendize"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTgEU0ILRgbC6CzlLp-Qb9SP9deO5-MGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

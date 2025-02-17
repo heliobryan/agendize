@@ -1,7 +1,9 @@
+// No nível do app, você adiciona as dependências do Firebase e aplica o plugin do Google Services
+
 plugins {
     id "com.android.application"
     id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // O plugin do Flutter deve ser aplicado depois dos plugins do Android e Kotlin
     id "dev.flutter.flutter-gradle-plugin"
 }
 
@@ -20,20 +22,15 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.agendize"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        minSdk = 23
+        targetSdk = 30
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
         }
     }
@@ -42,3 +39,17 @@ android {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    // Firebase BOM (gerenciador de versões do Firebase)
+    implementation platform('com.google.firebase:firebase-bom:30.0.1')
+
+    // Dependências específicas do Firebase
+    implementation 'com.google.firebase:firebase-auth'  // Para autenticação com Firebase
+    // Outras dependências do Firebase podem ser adicionadas aqui, por exemplo:
+    // implementation 'com.google.firebase:firebase-firestore'
+    // implementation 'com.google.firebase:firebase-database'
+}
+
+// Adicione isso para garantir que o Firebase seja configurado corretamente
+apply plugin: 'com.google.gms.google-services'

@@ -1,38 +1,42 @@
+// ignore: file_names
+import 'package:agendize/src/globalConstants/appFont.dart';
 import 'package:flutter/material.dart';
 
 final ThemeData agendizeTheme = ThemeData(
-  primaryColor: Color(0xFF2C3E50), // Cor da AppBar
-  hintColor: Color(0xFF3498DB), // Cor dos Botões
-  scaffoldBackgroundColor: Color(0xFFF5F7FA), // Cor do Plano de Fundo
+  primaryColor: Color(0xFF2C3E50),
+  hintColor: Color(0xFF3498DB),
+  scaffoldBackgroundColor: Color(0xFFF5F7FA),
   textTheme: TextTheme(
-    bodyLarge: TextStyle(color: Color(0xFF2C3E50)), // Cor do texto
-    bodyMedium: TextStyle(color: Color(0xFF2C3E50)), // Cor do texto
+    bodyLarge: principalFont.regular(
+        color: Color(0xFF2C3E50)), // Fonte personalizada para bodyLarge
+    bodyMedium: principalFont.regular(
+        color: Color(0xFF2C3E50)), // Fonte personalizada para bodyMedium
   ),
   appBarTheme: AppBarTheme(
-    backgroundColor: Color(0xFF2C3E50), // Cor da AppBar
+    backgroundColor: Color(0xFF2C3E50),
     elevation: 0,
-    titleTextStyle: TextStyle(
+    titleTextStyle: principalFont.bold(
+      // Fonte personalizada para o título da AppBar
       color: Colors.white,
       fontSize: 20,
-      fontWeight: FontWeight.w600,
     ),
   ),
   bottomAppBarTheme: BottomAppBarTheme(
-    color: Color(0xFF2C3E50), // Cor do BottomAppBar
+    color: Color(0xFF2C3E50),
   ),
   buttonTheme: ButtonThemeData(
-    buttonColor: Color(0xFF3498DB), // Cor dos Botões
+    buttonColor: Color(0xFF3498DB),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8),
     ),
   ),
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xFFBDC3C7)), // Cor do contorno
+      borderSide: BorderSide(color: Color(0xFFBDC3C7)),
     ),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xFFBDC3C7)), // Cor do contorno
+      borderSide: BorderSide(color: Color(0xFFBDC3C7)),
     ),
   ),
-  fontFamily: 'Poppins', // Fonte escolhida
+  fontFamily: 'STRETCH', // Aplicando a fonte 'STRETCH' como fonte padrão
 );

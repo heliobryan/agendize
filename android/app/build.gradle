@@ -24,7 +24,7 @@ android {
     defaultConfig {
         applicationId = "com.example.agendize"
         minSdk = 23
-        targetSdk = 30
+        targetSdk = 31
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
@@ -41,14 +41,8 @@ flutter {
 }
 
 dependencies {
-    // Firebase BOM (gerenciador de versões do Firebase)
-    implementation platform('com.google.firebase:firebase-bom:30.0.1')
-
-    // Dependências específicas do Firebase
-    implementation 'com.google.firebase:firebase-auth'  // Para autenticação com Firebase
-    // Outras dependências do Firebase podem ser adicionadas aqui, por exemplo:
-    // implementation 'com.google.firebase:firebase-firestore'
-    // implementation 'com.google.firebase:firebase-database'
+    implementation platform('com.google.firebase:firebase-bom:32.0.0') // Verifique a versão mais recente
+    implementation 'com.google.firebase:firebase-auth'
 }
 
 // Adicione isso para garantir que o Firebase seja configurado corretamente

@@ -5,8 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.google.gms:google-services:4.3.15'  // Plugin do Google Services
-        // Outras dependências podem ser adicionadas aqui
+       classpath 'com.google.gms:google-services:4.4.2'
     }
 }
 
